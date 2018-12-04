@@ -1,0 +1,22 @@
+Select APPROX_QUANTILES(media,1000)[OFFSET(500)] mediana
+
+from
+(Select id, (MAX(Tempo) - MIN(Tempo))/NULLIF(COUNT(Tempo) - 1, 0) media
+
+from
+(Select id,Tempo
+from 
+(SELECT id,
+       DATE_DIFF(date(timestamp), date(prev_timestamp), day) AS Tempo
+       
+FROM ( SELECT id,
+              timestamp,
+              LAG(timestamp) OVER(PARTITION BY id ORDER BY timestamp ASC) prev_timestamp
+       FROM `dito-data-scientist-challenge.tracking.dito`
+       where type = 'track'
+     ) 
+ORDER BY id, Tempo asc)
+where Tempo is not null
+order by id, tempo asc)
+group by id
+order by media)
