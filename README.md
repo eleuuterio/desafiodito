@@ -33,6 +33,7 @@ Na questao dois eu devia calcular quantos dias em media as pessoas compram usand
 
     "mediana": "0.4166666666666667"
 
+## Questão 3
 ###### Assim começou minha análise:
 
 ![alt text](https://github.com/eleuuterio/desafiodito/blob/master/pictures/Capturar.PNG)
