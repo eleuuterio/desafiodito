@@ -1,7 +1,9 @@
 # Desafio Dito
 Desafio para concorrencia de vaga de cientista de dados na Dito, divido em duas partes, sendo a primeira delas um problema que envolve SQL e a segunda Análise Exploratória de Dados.
 
-#Assim começou minha análise:
+Assim começou minha análise:
+
+![alt text](https://github.com/eleuuterio/desafiodito/blob/master/pictures/Capturar.PNG)
 
 
 Eu quis saber qual era a cara dos dados que estava analisando, então gerei umas visualizações bem rápidas  usando Power BI, utilizando algumas medidas simples de quantidade, quantificando número de email Enviados, Abertos, Clicados, Classificados com Spam e que geraram “Unsubscribe”, atreladas a uma dimensão de tempo completa tive uma vista geral do cenário é pude começar a validar minhas hipóteses.
