@@ -69,10 +69,12 @@ O gráfico não apresenta nenhuma informação de fácil entendimento pois a qua
 
 Portanto, meu objeto de análise passou a ser as ações de clique e de unsubscribe, pois as duas retratam o momento em que conseguimos a atenção do usuário e portanto são os melhores momentos para se entrar em contato com ele.
 
-A partir daí eu basicamente olhei como se comporta a distribuição dos cliques e unsubscribes ao longo dos quartos de ano, meses, dias e horas, e procurei um algoritmo de Send Time Optimization Time (STO) já implementado e disponíveis em literatura que seguisse essa mesma heurística. Fui feliz em minha busca por algoritmos em um blog de um cientista de dados Alemão especialista em Email Marketing, que possui um código implementado em R, fiz as adaptações necessárias no código fonte para aplicar aos dados em csv, mas infelizmente não obtive sucesso, e alguns erros apareceram. Por ser muito bem documentado e escrito em com uso das bibliotecas de Java e Weka em R, acredito que seja possível debugar, entretanto não me empenhei a tal atividade.
+A partir daí eu basicamente olhei como se comporta a distribuição dos cliques e unsubscribes ao longo dos quartos de ano, meses, dias e horas, e procurei um algoritmo de Send Time Optimization Time (STO) já implementado e disponíveis em literatura que seguisse essa mesma heurística. Fui feliz em minha busca por algoritmos em um blog de um cientista de dados Alemão especialista em Email Marketing chamado Rene Kulka, que possui um código implementado em R, fiz as adaptações necessárias no código fonte para aplicar aos dados em csv, mas infelizmente não obtive sucesso, e alguns erros apareceram. Por ser muito bem documentado e escrito em com uso das bibliotecas de Java e Weka em R, acredito que seja possível debugar, entretanto não me empenhei a tal atividade.
 
 ![alt text](https://github.com/eleuuterio/desafiodito/blob/master/pictures/cliques%20por%20hora.PNG)
 
 A visão geral que tiro dessa análise e a de que, para otimizar o horário de envio de emails, precisamos descobrir em qual momento o usuário faz a conferência dos e-mails dando a eles a necessária atenção, e fazer com que nossos email cheguem nesse horário, ocupando posição de destaque em sua caixa de emails. 
 
 Para isso, devemos buscar nos dados, informações que nos evidenciam horários em que o usuário dá grande atenção aos e-mail recebidos, como por exemplo ações de clique e unsubscribe. Mesmo que as ações de unsubscribe façam com que o usuario nao receba mais email de determinada lista, suas informações são ligadas aos seu email e podem ser utilizadas em listas de envios futuras.
+
+Ref: https://www.emailmarketingtipps.de/2018/09/30/send-time-optimization-code-example/
