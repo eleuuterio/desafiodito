@@ -1,6 +1,38 @@
 # Desafio Dito
 Desafio para concorrencia de vaga de cientista de dados na Dito, divido em duas partes, sendo a primeira delas um problema que envolve SQL e a segunda Análise Exploratória de Dados.
 
+## Questão 1
+Para encontrar o nome, email e telefone das 5 pessoas que mais geram receita eu usei três subqueries e dois joins. Primeiro eu peguei a soma de todas as vendas de cada id, depois todas as ultimas datas de alteracao de indentidade de cada id para pegar a ultima informacao apos a alteracao e por ultimo o nome telefone e email de cada id. os Joins foram pra ligar primeiramente a ultima alteracao com nome, telefone e email e depois com a vendas. Os dois ultimos usuarios, um nao possui email e outro nao possui telefone, poderia procurar o ultimo telefone disponivel deles usando um lag() na coluna vazia ate que ela nao fosse nula, mas resolvi respeitar a decisao do usuario de nao ser abordado por tal canal. O RESULTADO FOI:
+
+    "nome": "Heloísa Ordonhes",
+    "telefone": "(51) 91972-9639",
+    "email": "joshua_prosacco@gmail.com",
+    "Total": "4850.2699999999995"
+
+    "nome": "Mirella Soares",
+    "telefone": "(43) 97290-9288",
+    "email": "velia.pagac@hotmail.com",
+    "Total": "4433.44"
+
+    "nome": "Fernanda Resende",
+    "telefone": "(33) 92311-0450",
+    "email": "charlott.ledner@live.com",
+    "Total": "4289.6900000000005"
+ 
+    "nome": "Sophie Banheira",
+    "telefone": "(24) 91404-3805",
+    "email": null,
+    "Total": "4261.429999999999"
+    
+    "nome": "Alícia Pinheira",
+    "telefone": null,
+    "email": "bill@bol.com.br",
+    "Total": "4260.19"
+## Questão 2
+Na questao dois eu devia calcular quantos dias em media as pessoas compram usando a mediana como media. Usei a abordagem de nested queries pra nao repedir o metodo de subqueries com join, no primeiro nivel de captura de dados eu selecionei o id, horario e usei a funcao lag no horario particionada por id e ordernada crescentimente no horario para pegar sempre o horario anterior. Depois usei timediff pra fazer a diferenca em dias de cada compra, por ultimo calculei a media de compra de cada id e por fim usei a mediana da distribuicao de todos os clientes como media geral. O RESULTADO FOI:
+
+    "mediana": "0.4166666666666667"
+
 ###### Assim começou minha análise:
 
 ![alt text](https://github.com/eleuuterio/desafiodito/blob/master/pictures/Capturar.PNG)
@@ -10,11 +42,11 @@ Eu quis saber qual era a cara dos dados que estava analisando, então gerei umas
 Quando enviamos um e-mail marketing queremos chamar a atenção e ser notados, uma excelente forma de se conseguir isso é ser o primeiro da lista de e-mail recebidos do usuário quando o usuário vai checar seus e-mail, pois essa posição de destaque chama mais a atenção.
 As pessoas abrem um e-mail por vários motivos, entre eles destaco dois muito úteis para minha análise:
 
-Para limpar as notificações, nem chegando a ler, pois estão esperando um email em especial;
+- Para limpar as notificações, nem chegando a ler, pois estão esperando um email em especial;
 
--Na checagem rotineira de sua caixa de email, caso o e-mail não esteja em posição de destaque ou o assunto chame sua atenção, para limpar as notificações;
+- Na checagem rotineira de sua caixa de email, caso o e-mail não esteja em posição de destaque ou o assunto chame sua atenção, para limpar as notificações;
 
--Portanto, o fato de se abrir o e-mail não evidencia a melhor hora para se receber um email, ou seja, não mostra qual a melhor hora para enviar um  e-mail para esse usuário . 
+Portanto, o fato de se abrir o e-mail não evidencia a melhor hora para se receber um email, ou seja, não mostra qual a melhor hora para enviar um  e-mail para esse usuário . 
 
 Quando a pessoa da unsubscribe no e-mail ou clica no link do e-mail , ela realmente deu atenção para aquele e-mail, e resolveu tomar a decisão porque realmente estava checando o e-mail, é isso que queremos, a atenção dos usuários, por isso os melhores horários para enviar são os de cliques e unsubscribe, pois nesses momentos de tomada de decisão temos a certeza de ter conseguido a atenção do usuário, evidenciando que o email foi notado, e portanto estava em posição de destaque, ignorando-se seu conteúdo.
 
