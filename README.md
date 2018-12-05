@@ -1,7 +1,7 @@
 # Desafio Dito
 Desafio para concorrencia de vaga de cientista de dados na Dito, divido em duas partes, sendo a primeira delas um problema que envolve SQL e a segunda Análise Exploratória de Dados.
 
-Assim começou minha análise:
+###### Assim começou minha análise:
 
 ![alt text](https://github.com/eleuuterio/desafiodito/blob/master/pictures/Capturar.PNG)
 
@@ -12,9 +12,9 @@ As pessoas abrem um e-mail por vários motivos, entre eles destaco dois muito ú
 
 Para limpar as notificações, nem chegando a ler, pois estão esperando um email em especial;
 
-Na checagem rotineira de sua caixa de email, caso o e-mail não esteja em posição de destaque ou o assunto chame sua atenção, para limpar as notificações;
+-Na checagem rotineira de sua caixa de email, caso o e-mail não esteja em posição de destaque ou o assunto chame sua atenção, para limpar as notificações;
 
-Portanto, o fato de se abrir o e-mail não evidencia a melhor hora para se receber um email, ou seja, não mostra qual a melhor hora para enviar um  e-mail para esse usuário . 
+-Portanto, o fato de se abrir o e-mail não evidencia a melhor hora para se receber um email, ou seja, não mostra qual a melhor hora para enviar um  e-mail para esse usuário . 
 
 Quando a pessoa da unsubscribe no e-mail ou clica no link do e-mail , ela realmente deu atenção para aquele e-mail, e resolveu tomar a decisão porque realmente estava checando o e-mail, é isso que queremos, a atenção dos usuários, por isso os melhores horários para enviar são os de cliques e unsubscribe, pois nesses momentos de tomada de decisão temos a certeza de ter conseguido a atenção do usuário, evidenciando que o email foi notado, e portanto estava em posição de destaque, ignorando-se seu conteúdo.
 
